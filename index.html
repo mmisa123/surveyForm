@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width initail-scale=1.0">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
     <title>freeCodeCamp Survey Form</title>
   </head>
 <body>
@@ -10,12 +11,47 @@
   <p id="description" >Thank you for taking the time to help us improve the platform</p>
   <form id=survey-form>
     <fieldset>
-      <label>Name: <input id=name type="text" required /></label>
-      <label>email: <input id="email" required /></label>
+      <label for="name-label" id="name-label" > Name: <input id="name" type="text" placeholder="First name and Last name" required /> </label>
+      <label for="email-label" id="email-label" >email: <input id="email" type="email" placeholder="Enter your email address" required /> </label>
+      <label for="number-label" id="number-label" >age (optional): <input id="number" type="number" min="9" max="120" placeholder="How old are you ?"/></label>
+      <select id="dropdown">
+        <option>Select your current role</option>
+        <option>Students</option>
+        <option>Full time learner</option>
+        <option>Full time job</option>
+        <option>Prefer not to say</option>
+        <option>Other</option>
+      </select>
     </fieldset>
-    <fieldset></fieldset>
-    <fieldset></fieldset>
-    <fieldset></fieldset>
+    <fieldset>
+      <p>Would you recommend freeCodeCamp to a friend? </p>
+      <label for="recommend" >Definately <input name="recommend" type="radio" value="1" /></label>
+      <label>Not sure <input name="recommend" type="radio" value="2" /></label>
+      <label>Maybe <input name="recommend"  type="radio" value="3" /></label>
+    </fieldset>
+    <fieldset>
+      <p>What is your favorite feature of freeCodeCamp ?</p>
+         <select>
+        <option>Select an option</option> <option>Challenges</option>
+<option>Projects</option>
+<option>Community</option>
+<option>Open Source</option></select>
+    </fieldset>
+    
+    <fieldset>
+      
+    <p>What would you like to see improved (check all that apply)</p>
+      <label><input type="checkbox" value="front-end" />Front-end Projects</label>
+      <label><input type="checkbox" value="back-end" />Back-end Projects </label>
+      <label><input type="checkbox" value="data-visualization" /> Data Visualization </label>
+      <label><input type="checkbox" value="challenges" />Challenges </label>
+    </fieldset>
+    <fieldset>
+      <label for="comments" >Any Comments or Suggestions ?<textarea placeholder="Enter your comments here" id="comments" ></textarea>
+        </label>
+    </fieldset>
+    <input type="submit" name="submit" value="Submit" id="submit" />
+
   </form>
 </body>
 </html>
